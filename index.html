@@ -1168,7 +1168,7 @@ function renderPicker() {
   var assigned= slots.map(function(s){return s.playerId;}).filter(Boolean);
   var current = slot.playerId;
 
-  // Tous les joueurs, triés : dispos d'abord, puis indispos
+  // Tous les joueurs, triés : dispos d\'abord, puis indispos
   var dispos   = players.filter(function(p){ return p.statut==='ok' && (assigned.indexOf(p.id)<0 || p.id===current); })
                         .sort(function(a,b){return posteSortKey(a)-posteSortKey(b)||a.nom.localeCompare(b.nom);});
   var indispos = players.filter(function(p){
@@ -1289,7 +1289,7 @@ var EXERCICES = [
   {
     id:4, theme:'attaque', titre:'Attaque placée : jeu en triangle',
     duree:'25 min', joueurs:'9 joueurs', difficulte:'⭐⭐⭐',
-    desc:'Circulation de balle rapide en triangle pour créer des décalages et trouver l'espace dans une défense organisée.',
+    desc:'Circulation de balle rapide en triangle pour créer des décalages et trouver l\'espace dans une défense organisée.',
     consignes:['Triangle : milieu central + 2 ailiers','Jeu en 2 touches max','Le 3ème homme fait toujours la course de profondeur','Finir par un tir ou un centre systématiquement'],
     schema:'triangle_attaque'
   },
@@ -1317,14 +1317,14 @@ var EXERCICES = [
   {
     id:8, theme:'technique', titre:'Contrôle orienté + conduite',
     duree:'15 min', joueurs:'8 joueurs', difficulte:'⭐',
-    desc:'Exercice de contrôle orienté pour préparer l'action suivante immédiatement. Passe + contrôle dans l'espace + conduite + passe.',
-    consignes:['En colonne, face à face à 15m','Passe → contrôle orienté vers l'extérieur → conduite 5m → passe retour','Orientation du contrôle vers le côté libre','Progressivement augmenter la vitesse d'exécution'],
+    desc:'Exercice de contrôle orienté pour préparer l\'action suivante immédiatement. Passe + contrôle dans l\'espace + conduite + passe.',
+    consignes:['En colonne, face à face à 15m','Passe → contrôle orienté vers l\'extérieur → conduite 5m → passe retour','Orientation du contrôle vers le côté libre','Progressivement augmenter la vitesse d\'exécution'],
     schema:'controle_oriente'
   },
   {
     id:9, theme:'physique', titre:'Navettes intensives 30-30',
     duree:'20 min', joueurs:'Tout le groupe', difficulte:'⭐⭐⭐',
-    desc:'Travail intermittent 30 secondes d'effort / 30 secondes de récupération sur 20m. Reproduit les efforts du match.',
+    desc:'Travail intermittent 30 secondes d\'effort / 30 secondes de récupération sur 20m. Reproduit les efforts du match.',
     consignes:['Navettes sur 20m : sprint aller-retour','30 sec effort maximal / 30 sec marche','6 à 8 séries selon le niveau','Surveiller la fréquence cardiaque : max 85-90%'],
     schema:'navettes'
   },
@@ -1338,7 +1338,7 @@ var EXERCICES = [
   {
     id:11, theme:'transition', titre:'Transition défense-attaque rapide',
     duree:'20 min', joueurs:'8 vs 8', difficulte:'⭐⭐⭐',
-    desc:'Dès la récupération du ballon, basculer immédiatement en phase offensive avant que l'adversaire se replace. Contre-attaque rapide en 4-6 secondes.',
+    desc:'Dès la récupération du ballon, basculer immédiatement en phase offensive avant que l\'adversaire se replace. Contre-attaque rapide en 4-6 secondes.',
     consignes:['Zone de récupération fixée à 40m du but','Dès récupération : 1 passe max puis conduite rapide','2 joueurs partent en profondeur dès la perte du ballon adverse','Objectif : tir en moins de 8 secondes après récupération'],
     schema:'transition'
   },
@@ -1398,7 +1398,7 @@ function rotationTriangleSVG(){return triangleSVG();}
 function cinqTroisSVG(){var h=180;return svgTerrain(defs()+dot(50,80,'#1565c0','A')+dot(120,50,'#1565c0','B')+dot(150,100,'#1565c0','C')+dot(230,60,'#1565c0','D')+dot(200,120,'#1565c0','E')+dot(100,120,'#e53935','D1')+dot(160,80,'#e53935','D2')+dot(200,90,'#e53935','D3')+arw(50,80,120,55,'rgba(255,255,0,.9)','4,2')+arw(120,55,230,65,'rgba(255,255,0,.9)','4,2')+ballon(50,80),h);}
 
 function schemaExo(id) {
-  // SVG miniatures des schémas selon l'exercice
+  // SVG miniatures des schémas selon l\'exercice
   var schemas = {
     pressing433: pressing433SVG(),
     pressing4231: pressing4231SVG(),
@@ -1431,7 +1431,6 @@ function schemaExo(id) {
     deux_un: deuxUnSVG(),
     rotation_triangle: rotationTriangleSVG(),
     cinq_trois: cinqTroisSVG(),
-    pressing433:
     bloc442: bloc442SVG(),
     combinaison_droite: combinaisonDroiteSVG(),
     triangle_attaque: triangleSVG(),
@@ -1665,34 +1664,34 @@ function inferioriteSVG(){
     id:15, theme:'pressing', titre:'Pressing en 4-2-3-1 : fermeture des lignes',
     duree:'20 min', joueurs:'11 vs 11', difficulte:'⭐⭐⭐',
     desc:'Le 4-2-3-1 défensif avec fermeture rapide des lignes de passes intérieures. Les 2 MC défensifs couvrent le centre pendant que les 3 milieux offensifs pressent haut.',
-    consignes:['Les 2 MC défensifs ne bougent pas : ils couvrent les couloirs centraux','Le MOC déclenche le pressing sur le porteur','Les ailiers ferment immédiatement les latéraux adverses','Le BU oriente le jeu adverse vers un côté choisi à l'avance'],
+    consignes:['Les 2 MC défensifs ne bougent pas : ils couvrent les couloirs centraux','Le MOC déclenche le pressing sur le porteur','Les ailiers ferment immédiatement les latéraux adverses','Le BU oriente le jeu adverse vers un côté choisi à l\'avance'],
     schema:'pressing4231'
   },
   {
     id:16, theme:'pressing', titre:'Pressing en zone : piège sur le côté',
     duree:'20 min', joueurs:'9 vs 9', difficulte:'⭐⭐⭐',
     desc:'Orienter volontairement le ballon vers le côté gauche pour déclencher un pressing collectif en surnombre sur ce côté.',
-    consignes:['BU oriente l'adversaire vers le couloir gauche','3-4 joueurs convergent immédiatement sur ce côté','Les autres coupent les passes vers le centre et l'autre côté','Dès récupération : transition rapide vers le côté droit libéré'],
+    consignes:['BU oriente l\'adversaire vers le couloir gauche','3-4 joueurs convergent immédiatement sur ce côté','Les autres coupent les passes vers le centre et l\'autre côté','Dès récupération : transition rapide vers le côté droit libéré'],
     schema:'piege_cote'
   },
   {
     id:17, theme:'pressing', titre:'Ligne défensive haute : hors-jeu provoqué',
     duree:'15 min', joueurs:'8 vs 8', difficulte:'⭐⭐⭐',
     desc:'Monter la ligne défensive pour provoquer des hors-jeux. Les 4 défenseurs sortent ensemble au signal du capitaine.',
-    consignes:['Signal : cri "LIGNE" du capitaine ou du libero','Les 4 défenseurs montent ensemble à l'unisson','Le GB sort aussi pour couvrir l'espace derrière','Règle : si doute → ne pas sortir'],
+    consignes:['Signal : cri "LIGNE" du capitaine ou du libero','Les 4 défenseurs montent ensemble à l\'unisson','Le GB sort aussi pour couvrir l\'espace derrière','Règle : si doute → ne pas sortir'],
     schema:'ligne_haute'
   },
   {
     id:18, theme:'pressing', titre:'Bloc médian 4-4-2 : attirer et presser',
     duree:'20 min', joueurs:'11 vs 11', difficulte:'⭐⭐',
-    desc:'Se replier en bloc médian pour attirer l'adversaire puis déclencher un pressing agressif quand la balle arrive dans la zone de vérité.',
-    consignes:['Bloc entre les 2 surfaces : laisser l'adversaire progresser','Déclencher le pressing quand le ballon dépasse la ligne des 30m','Les 2 BU ferment la sortie des DC adverses','Les 4 milieux referment rapidement sur les porteurs'],
+    desc:'Se replier en bloc médian pour attirer l\'adversaire puis déclencher un pressing agressif quand la balle arrive dans la zone de vérité.',
+    consignes:['Bloc entre les 2 surfaces : laisser l\'adversaire progresser','Déclencher le pressing quand le ballon dépasse la ligne des 30m','Les 2 BU ferment la sortie des DC adverses','Les 4 milieux referment rapidement sur les porteurs'],
     schema:'bloc_median'
   },
   {
     id:19, theme:'pressing', titre:'Pressing après corner défensif',
     duree:'15 min', joueurs:'11 vs 11', difficulte:'⭐⭐',
-    desc:'Après avoir dégagé un corner, lancer immédiatement un pressing haut avant que l'adversaire ne se replace.',
+    desc:'Après avoir dégagé un corner, lancer immédiatement un pressing haut avant que l\'adversaire ne se replace.',
     consignes:['Dès le dégagement : les 3 joueurs les plus avancés pressent','Les milieux montent dans les 5 secondes','Objectif : récupérer dans les 30m adverses','Si pas de récupération en 8 sec : retour en bloc bas'],
     schema:'pressing_corner'
   },
@@ -1701,8 +1700,8 @@ function inferioriteSVG(){
   {
     id:20, theme:'attaque', titre:'Attaque rapide sur les côtés : 1-2-1',
     duree:'20 min', joueurs:'6 joueurs', difficulte:'⭐⭐',
-    desc:'Combinaison rapide pour déborder le latéral adverse avec un 1-2 et une course en profondeur de l'ailier.',
-    consignes:['Ailier reçoit dos au but','Donne et décroche en profondeur dans le dos du latéral','Le milieu fait l'appel intérieur pour libérer l'espace','Centre en retrait pour le BU ou le MC qui arrive'],
+    desc:'Combinaison rapide pour déborder le latéral adverse avec un 1-2 et une course en profondeur de l\'ailier.',
+    consignes:['Ailier reçoit dos au but','Donne et décroche en profondeur dans le dos du latéral','Le milieu fait l\'appel intérieur pour libérer l\'espace','Centre en retrait pour le BU ou le MC qui arrive'],
     schema:'attaque_cote'
   },
   {
@@ -1723,13 +1722,13 @@ function inferioriteSVG(){
     id:23, theme:'attaque', titre:'Attaque placée : sortie de bloc bas',
     duree:'25 min', joueurs:'11 vs 11', difficulte:'⭐⭐⭐',
     desc:'Comment sortir proprement du bloc bas adverse avec une circulation courte puis une balle longue pour libérer les attaquants.',
-    consignes:['GB → DC → MC en retrait','MC joue en 1 touche vers le milieu axial','Long ballon vers l'espace dans le dos de la ligne adverse','BU court en profondeur sur la balle longue, pas sur le joueur'],
+    consignes:['GB → DC → MC en retrait','MC joue en 1 touche vers le milieu axial','Long ballon vers l\'espace dans le dos de la ligne adverse','BU court en profondeur sur la balle longue, pas sur le joueur'],
     schema:'sortie_bloc'
   },
   {
-    id:24, theme:'attaque', titre:'Mouvement d'attaque en 3-2 : décalage',
+    id:24, theme:'attaque', titre:'Mouvement d\'attaque en 3-2 : décalage',
     duree:'20 min', joueurs:'8 joueurs', difficulte:'⭐⭐⭐',
-    desc:'Les 3 attaquants et 2 milieux créent des décalages successifs pour trouver l'homme libre face au but.',
+    desc:'Les 3 attaquants et 2 milieux créent des décalages successifs pour trouver l\'homme libre face au but.',
     consignes:['3 att : L-C-R en ligne','2 mil : 1 axial + 1 côté','Circulation : mil axial → att C → décrochage att L ou R','Le 3e att part toujours en profondeur côté opposé'],
     schema:'decalage_3v2'
   },
@@ -1745,8 +1744,8 @@ function inferioriteSVG(){
   {
     id:26, theme:'technique', titre:'Passe et suit : circuit à 4',
     duree:'15 min', joueurs:'8 joueurs', difficulte:'⭐',
-    desc:'Passe et suit son ballon. 4 joueurs sur les côtés d'un carré de 15m. Passe → va à la place du receveur.',
-    consignes:['Carré de 15m avec 2 joueurs par côté','Passe vers le côté droit → court vers l'endroit où tu as passé','Progressif : 2 touches → 1 touche → 1 touche avec changement direction','Variante : 2 ballons en même temps'],
+    desc:'Passe et suit son ballon. 4 joueurs sur les côtés d\'un carré de 15m. Passe → va à la place du receveur.',
+    consignes:['Carré de 15m avec 2 joueurs par côté','Passe vers le côté droit → court vers l\'endroit où tu as passé','Progressif : 2 touches → 1 touche → 1 touche avec changement direction','Variante : 2 ballons en même temps'],
     schema:'passe_suit'
   },
   {
@@ -1760,14 +1759,14 @@ function inferioriteSVG(){
     id:28, theme:'technique', titre:'Tir en mouvement : appel + frappe',
     duree:'20 min', joueurs:'6 joueurs', difficulte:'⭐⭐',
     desc:'Travailler le tir en mouvement avec un appel préalable. Le joueur reçoit dans le mouvement et frappe directement ou en 1 touche.',
-    consignes:['Départ du poteau opposé → appel diagonal','Recevez la passe dans le mouvement sans s'arrêter','Frappe directe ou contrôle + frappe en 1 touche','Varier : côté droit, côté gauche, axe central'],
+    consignes:['Départ du poteau opposé → appel diagonal','Recevez la passe dans le mouvement sans s\'arrêter','Frappe directe ou contrôle + frappe en 1 touche','Varier : côté droit, côté gauche, axe central'],
     schema:'tir_mouvement'
   },
   {
     id:29, theme:'technique', titre:'Jeu de tête offensif et défensif',
     duree:'15 min', joueurs:'Par 2', difficulte:'⭐',
     desc:'Exercices de jeu de tête progressifs : tête debout, en mouvement, en saut, en concurrence. Offensive (but) et défensive (dégagement).',
-    consignes:['Phase 1 : tête debout à 3m l'un de l'autre (10 rép)','Phase 2 : tête en mouvement (appel + saut)','Phase 3 : 1 centre + 1 défenseur + 1 attaquant','Attention : menton rentré, yeux ouverts, frappe avec le front'],
+    consignes:['Phase 1 : tête debout à 3m l\'un de l\'autre (10 rép)','Phase 2 : tête en mouvement (appel + saut)','Phase 3 : 1 centre + 1 défenseur + 1 attaquant','Attention : menton rentré, yeux ouverts, frappe avec le front'],
     schema:'jeu_tete'
   },
   {
@@ -1783,7 +1782,7 @@ function inferioriteSVG(){
     id:31, theme:'physique', titre:'Jeu réduit 5v5 : intensité maximale',
     duree:'20 min', joueurs:'10 joueurs', difficulte:'⭐⭐⭐',
     desc:'5 contre 5 sur terrain réduit (30x20m) avec pressing permanent. Haute intensité cardio + technique sous pression.',
-    consignes:['Terrain 30x20m, 2 petits buts','Pressing obligatoire dès la perte de balle','Séries de 4 min avec 2 min de repos','Rotation toutes les 4 min pour maintenir l'intensité'],
+    consignes:['Terrain 30x20m, 2 petits buts','Pressing obligatoire dès la perte de balle','Séries de 4 min avec 2 min de repos','Rotation toutes les 4 min pour maintenir l\'intensité'],
     schema:'jeu_reduit_5v5'
   },
   {
@@ -1827,14 +1826,14 @@ function inferioriteSVG(){
     id:37, theme:'cpa', titre:'Coup franc défensif : organisation du mur',
     duree:'10 min', joueurs:'11 joueurs', difficulte:'⭐',
     desc:'Organisation rapide du mur défensif à partir de la position du tireur adverse. Le GB positionne le mur, un joueur tient le mur.',
-    consignes:['GB se place du côté du 1er poteau à couvrir','1 joueur désigné aligne le mur sur indication du GB','Mur de 3, 4 ou 5 joueurs selon la distance et l'angle','Les autres joueurs marquent les adversaires dans la surface'],
+    consignes:['GB se place du côté du 1er poteau à couvrir','1 joueur désigné aligne le mur sur indication du GB','Mur de 3, 4 ou 5 joueurs selon la distance et l\'angle','Les autres joueurs marquent les adversaires dans la surface'],
     schema:'mur_defensif'
   },
   {
     id:38, theme:'cpa', titre:'Touche offensive : combinaison rapide',
     duree:'10 min', joueurs:'5 joueurs', difficulte:'⭐',
-    desc:'Tirer parti d'une rentrée de touche offensive avec une combinaison rapide pour créer une situation de tir ou de centre.',
-    consignes:['Lanceur à la touche','Joueur 1 : appel court pour recevoir','Joueur 2 : démarquage en profondeur','Joueur 3 : apport de l'autre côté pour la déviation','Ne jamais jouer la touche lentement en zone offensive'],
+    desc:'Tirer parti d\'une rentrée de touche offensive avec une combinaison rapide pour créer une situation de tir ou de centre.',
+    consignes:['Lanceur à la touche','Joueur 1 : appel court pour recevoir','Joueur 2 : démarquage en profondeur','Joueur 3 : apport de l\'autre côté pour la déviation','Ne jamais jouer la touche lentement en zone offensive'],
     schema:'touche_off'
   },
 
@@ -1850,7 +1849,7 @@ function inferioriteSVG(){
     id:40, theme:'transition', titre:'Balle longue vers les BU : contre-attaque',
     duree:'20 min', joueurs:'8 joueurs', difficulte:'⭐⭐',
     desc:'Sur récupération du ballon en zone défensive, jouer immédiatement long vers les 2 BU qui partent en profondeur.',
-    consignes:['GB ou DC récupère → balle longue immédiate sans réflexion','2 BU partent en profondeur dès qu'ils voient la récupération','1 milieu suit en soutien (arrive en 3e)','Ne jamais jouer court en zone défensive si les BU sont libres'],
+    consignes:['GB ou DC récupère → balle longue immédiate sans réflexion','2 BU partent en profondeur dès qu\'ils voient la récupération','1 milieu suit en soutien (arrive en 3e)','Ne jamais jouer court en zone défensive si les BU sont libres'],
     schema:'balle_longue'
   },
   {
@@ -1866,7 +1865,7 @@ function inferioriteSVG(){
     id:42, theme:'surnom', titre:'2v1 : exploiter la supériorité',
     duree:'15 min', joueurs:'3 joueurs', difficulte:'⭐',
     desc:'Situation élémentaire de 2 contre 1. Apprendre à ne jamais perdre un 2v1 : temporiser, attirer, décaler.',
-    consignes:['Joueur avec le ballon : conduire vers le défenseur','Dès que le déf engage : passe vers le partenaire libre','Le partenaire : toujours à distance de passe, jamais dans le dos du déf','Ne jamais se précipiter : attirer d'abord, décaler ensuite'],
+    consignes:['Joueur avec le ballon : conduire vers le défenseur','Dès que le déf engage : passe vers le partenaire libre','Le partenaire : toujours à distance de passe, jamais dans le dos du déf','Ne jamais se précipiter : attirer d\'abord, décaler ensuite'],
     schema:'deux_un'
   },
   {
@@ -2527,7 +2526,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (bPidEl) {
       if (pickingBenchIdx === null) return;
       var pid = parseInt(bPidEl.getAttribute('data-bench-pid'));
-      // Retirer joueur de l'autre slot bench si présent
+      // Retirer joueur de l\'autre slot bench si présent
       compoState.bench = compoState.bench.map(function(id,i){return (id===pid&&i!==pickingBenchIdx)?null:id;});
       compoState.bench[pickingBenchIdx] = pid;
       pickingBenchIdx = null;
